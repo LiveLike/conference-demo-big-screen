@@ -1,4 +1,41 @@
+const createTextPollOption = (textQuizOption) => {
+    return `
+<div class="col-md-12">
+    <div class="text-quiz-option">
+        <p class="text-quiz-option-description">${textQuizOption.description}</p>
+    </div>
+</div>
+`;
+};
 
+const getTextPollOptions = (options) => {
+    let result = "";
+    for (let i = 0; i < options.length; i++) {
+        result += createTextPollOption(options[i]);
+    }
+    return result;
+};
+
+const getTextPoll = (widget) => {
+    return `
+    <div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <div class="text-quiz-container">
+            <div class="text-quiz-options">
+                <div class="row">
+                    ${getTextPollOptions(widget.options)}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    `;
+};
 
 const createImagePollOption = (imageQuizOption) => {
     return `
@@ -63,15 +100,27 @@ const setImageQuizWidget = (widget) => {
     addWidgetInContainer(getImagePoll(widget));
 }
 
+const setTextQuizWidget = (widget) => {
+    addWidgetInContainer(getTextPoll(widget));
+}
+
 const widgetHandler = (e) => {
     console.log(e.event);
     console.log(e.widgetPayload);
-    if (e.event === "image-poll-created" || "image-quiz-created" || "image-prediction-created") {
+    debugger;
+    if (e.event === "image-poll-created" || e.event === "image-quiz-created" || e.event === "image-prediction-created") {
         console.log(e.widgetPayload.question);
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
         setImageQuizWidget(e.widgetPayload);
+    }
+    if (e.event === "text-poll-created" || e.event === "text-quiz-created" || e.event === "text-prediction-created") {
+        console.log(e.widgetPayload.question);
+        if (e.widgetPayload.choices) {
+            e.widgetPayload.options = e.widgetPayload.choices;
+        }
+        setTextQuizWidget(e.widgetPayload);
     }
 };
 

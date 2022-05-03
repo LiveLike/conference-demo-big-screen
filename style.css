@@ -51,6 +51,24 @@ body {
   font-weight: bold;
 }
 
+.text-quiz-option {
+  margin-top: 10px;
+  text-align: left;
+  background-color: lightgray;
+  border: 5px;
+  border-color: white;
+  border-radius: 25px;
+  border-style: solid;
+}
+
+.text-quiz-option-description {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+}
+
 /*
 .css{
   animation: blinker 1s linear;

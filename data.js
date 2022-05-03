@@ -250,3 +250,189 @@ var imagePredictionWidgetPayload = {
     "widget_attributes": [],
     "timetoken": "16515724822574584"
 };
+
+var textPollWidgetPayload = {
+    "id": "81af9282-2bc5-4f81-8c30-7d8bfbb95d32",
+    "url": "https://cf-blast.livelikecdn.com/api/v1/text-predictions/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/",
+    "kind": "text-prediction",
+    "program_id": "9baf1962-f7db-43b9-ae8e-b84f1bf31988",
+    "client_id": "jV2LSongmdccPRL65M8GC6Z8lTievPsRsqsoSMiq",
+    "created_at": "2022-05-03T10:24:41.986Z",
+    "published_at": "2022-05-03T10:24:42.852Z",
+    "scheduled_at": "2022-05-03T10:24:42.106Z",
+    "interactive_until": null,
+    "follow_up_url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-follow-ups/",
+    "follow_ups": [
+        {
+            "id": "8dfb441e-6311-4ff2-96e0-ae0ba84485d6",
+            "url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-follow-ups/8dfb441e-6311-4ff2-96e0-ae0ba84485d6/",
+            "program_id": "9baf1962-f7db-43b9-ae8e-b84f1bf31988",
+            "client_id": "jV2LSongmdccPRL65M8GC6Z8lTievPsRsqsoSMiq",
+            "text_prediction_id": "81af9282-2bc5-4f81-8c30-7d8bfbb95d32",
+            "text_prediction_url": "https://cf-blast.livelikecdn.com/api/v1/text-predictions/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/",
+            "correct_option_id": null,
+            "timeout": "P0DT00H00M30S",
+            "published_at": null,
+            "scheduled_at": null,
+            "interactive_until": null,
+            "created_at": "2022-05-03T10:24:42.533Z",
+            "subscribe_channel": "program.widget.9baf1962-f7db-43b9-ae8e-b84f1bf31988",
+            "kind": "text-prediction-follow-up",
+            "options": [
+                {
+                    "id": "e2990e6f-4a44-4a25-a7bd-ea8273446a77",
+                    "url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-options/e2990e6f-4a44-4a25-a7bd-ea8273446a77/",
+                    "description": "brazil",
+                    "is_correct": false,
+                    "vote_count": 0,
+                    "vote_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-interactions/text-prediction/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/options/e2990e6f-4a44-4a25-a7bd-ea8273446a77/votes/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWQiOiJnQUFBQUFCaWNRTHFTWTMwd3BzdHVoRm1pUW0tMU16RXl5RG8xZUczcDhaYW1RdjhDNWRTc0dLaUlpYTFXb3M2QjNoeDk2YU9qcnlnbW1XcnN0eE50RE9jRGFZQ2NRXzJrdz09IiwiaXNzIjoiYmxhc3QiLCJpYXQiOjE2NTE1NzM0ODJ9.2NsaS7vELbFDDE8gM4CSodDLwy9M-CPExkGq0s7Zbh4/",
+                    "earnable_rewards": [
+                        {
+                            "reward_item_id": "7ba217a7-0384-4ab7-945f-115c3437c813",
+                            "reward_item_name": "Jupiler XP",
+                            "reward_item_amount": 1,
+                            "reward_action_key": "prediction-correct"
+                        }
+                    ],
+                    "translations": {},
+                    "translatable_fields": [
+                        "description"
+                    ]
+                },
+                {
+                    "id": "94a210d3-dbfd-480c-b5cb-ccfaee803b69",
+                    "url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-options/94a210d3-dbfd-480c-b5cb-ccfaee803b69/",
+                    "description": "germany",
+                    "is_correct": false,
+                    "vote_count": 0,
+                    "vote_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-interactions/text-prediction/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/options/94a210d3-dbfd-480c-b5cb-ccfaee803b69/votes/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWQiOiJnQUFBQUFCaWNRTHFwUURGbGZsVzVPNFN6SC11ajYxNnJ5eFAyMFdRZkxFR1BKUmN5OU9JYmRrUm1NV192TjVZUnVUT3ZNWFFtcEUydnBTUm1EQzZUZ0N4WnNjSkVrem8zUT09IiwiaXNzIjoiYmxhc3QiLCJpYXQiOjE2NTE1NzM0ODJ9.OyxnpT3q833zn-8sMg5bQ36jUyfuETJVmQk12-AyODY/",
+                    "earnable_rewards": [
+                        {
+                            "reward_item_id": "7ba217a7-0384-4ab7-945f-115c3437c813",
+                            "reward_item_name": "Jupiler XP",
+                            "reward_item_amount": 1,
+                            "reward_action_key": "prediction-correct"
+                        }
+                    ],
+                    "translations": {},
+                    "translatable_fields": [
+                        "description"
+                    ]
+                }
+            ],
+            "question": "who won?",
+            "program_date_time": null,
+            "publish_delay": "P0DT00H00M00S",
+            "interaction_url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-follow-ups/8dfb441e-6311-4ff2-96e0-ae0ba84485d6/interactions/",
+            "impression_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-impressions/text-prediction-follow-up/8dfb441e-6311-4ff2-96e0-ae0ba84485d6/",
+            "impression_count": 0,
+            "unique_impression_count": 0,
+            "engagement_count": null,
+            "engagement_percent": null,
+            "status": "pending",
+            "created_by": {
+                "id": "b3affd11-5bef-49fc-b430-03525a63995a",
+                "name": null,
+                "image_url": null
+            },
+            "schedule_url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-follow-ups/8dfb441e-6311-4ff2-96e0-ae0ba84485d6/schedule/",
+            "rewards_url": null,
+            "translations": {},
+            "translatable_fields": [],
+            "reactions": [],
+            "custom_data": null,
+            "claim_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-interaction-claims/text-prediction/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/claims/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWQiOiJnQUFBQUFCaWNRTHFkQndXdlczcllmNmlWdjA2M21SQXBtV1FJOHl1YjRodndzeGsxbDRTWV9xVGRkc3RMSzNoNUxWNXhpRlQyRDBHSkhxZ3pTQXdNT2RVczBqQmNRTjNUZlNZOGotQ2RJenVnMjhKYlhsMDRFRWpfWmJ5TG9pUENIeWMtYzRaem9UVTRNYkJ0dHc4TDZ2VVRDb3JDQUFjM2R0M3hEbUJJc0xQcnpaZ1VQbzcwMmNKcExvSDdnelpGMUFtX1JULVJGS08iLCJpc3MiOiJibGFzdCIsImlhdCI6MTY1MTU3MzQ4Mn0.rUa3C151JtspCBoxSKUkmnsvedcAPMPKykVCt1Bql2o/",
+            "sponsors": [],
+            "earnable_rewards": [],
+            "widget_interactions_url_template": "https://cf-blast.livelikecdn.com/api/v1/profiles/{profile_id}/widget-interactions/?text_prediction_id=81af9282-2bc5-4f81-8c30-7d8bfbb95d32",
+            "widget_attributes": []
+        }
+    ],
+    "question": "who won?",
+    "confirmation_message": "Alright! Stay tuned to see the result.",
+    "timeout": "P0DT00H05M00S",
+    "options": [
+        {
+            "id": "e2990e6f-4a44-4a25-a7bd-ea8273446a77",
+            "url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-options/e2990e6f-4a44-4a25-a7bd-ea8273446a77/",
+            "description": "brazil",
+            "is_correct": false,
+            "vote_count": 0,
+            "vote_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-interactions/text-prediction/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/options/e2990e6f-4a44-4a25-a7bd-ea8273446a77/votes/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWQiOiJnQUFBQUFCaWNRTHEtQjJMeXZyc3RKdlpkV2FJRktwT25PTTEzR0lRYm1yNXhpWjZQc1AzT245TkFiU2FFWWVldmJZY0dsWEd4R29SNzJhNGdsakxuSVBHSzJCTVJIcUhXQT09IiwiaXNzIjoiYmxhc3QiLCJpYXQiOjE2NTE1NzM0ODJ9.eIqSTKsu4nTMKU504gbnuuYhCCZRrHLNoORwbLBgkok/",
+            "earnable_rewards": [
+                {
+                    "reward_item_id": "7ba217a7-0384-4ab7-945f-115c3437c813",
+                    "reward_item_name": "Jupiler XP",
+                    "reward_item_amount": 1,
+                    "reward_action_key": "prediction-correct"
+                }
+            ],
+            "translations": {},
+            "translatable_fields": [
+                "description"
+            ]
+        },
+        {
+            "id": "94a210d3-dbfd-480c-b5cb-ccfaee803b69",
+            "url": "https://cf-blast.livelikecdn.com/api/v1/text-prediction-options/94a210d3-dbfd-480c-b5cb-ccfaee803b69/",
+            "description": "germany",
+            "is_correct": false,
+            "vote_count": 0,
+            "vote_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-interactions/text-prediction/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/options/94a210d3-dbfd-480c-b5cb-ccfaee803b69/votes/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWQiOiJnQUFBQUFCaWNRTHEyY0lPVWNSdC0zQWdaMTNEWmNZbHhDdTBfOG04T2VGOEt1VnA5N3BraEpUbF9zTWZmcWV6N1lKZXBPVVR2WlBPQl9rNDN2RlBiaWhjN0YxMUN1QnZ2UT09IiwiaXNzIjoiYmxhc3QiLCJpYXQiOjE2NTE1NzM0ODJ9.i-pTpNbPO1SVV_Wrm4bUot121xkztCbCZQ7VVmLELrQ/",
+            "earnable_rewards": [
+                {
+                    "reward_item_id": "7ba217a7-0384-4ab7-945f-115c3437c813",
+                    "reward_item_name": "Jupiler XP",
+                    "reward_item_amount": 1,
+                    "reward_action_key": "prediction-correct"
+                }
+            ],
+            "translations": {},
+            "translatable_fields": [
+                "description"
+            ]
+        }
+    ],
+    "subscribe_channel": "program.widget.9baf1962-f7db-43b9-ae8e-b84f1bf31988",
+    "program_date_time": null,
+    "publish_delay": "P0DT00H00M00S",
+    "interaction_url": "https://cf-blast.livelikecdn.com/api/v1/text-predictions/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/interactions/",
+    "impression_url": "https://blastrt-prod-us-east-1.livelikecdn.com/api/v1/widget-impressions/text-prediction/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/",
+    "impression_count": 0,
+    "unique_impression_count": 0,
+    "engagement_count": 0,
+    "engagement_percent": "0.000",
+    "status": "published",
+    "created_by": {
+        "id": "b3affd11-5bef-49fc-b430-03525a63995a",
+        "name": null,
+        "image_url": null
+    },
+    "schedule_url": "https://cf-blast.livelikecdn.com/api/v1/text-predictions/81af9282-2bc5-4f81-8c30-7d8bfbb95d32/schedule/",
+    "rewards_url": null,
+    "translations": {},
+    "translatable_fields": [
+        "question",
+        "confirmation_message"
+    ],
+    "reactions": [],
+    "custom_data": null,
+    "sponsors": [],
+    "earnable_rewards": [
+        {
+            "reward_item_id": "f412f658-fc53-4924-8fed-8103d81a826d",
+            "reward_item_name": "Web Demo Reward",
+            "reward_action_key": "prediction-correct",
+            "reward_item_amount": 150
+        },
+        {
+            "reward_item_id": "f412f658-fc53-4924-8fed-8103d81a826d",
+            "reward_item_name": "Web Demo Reward",
+            "reward_action_key": "prediction-made",
+            "reward_item_amount": 100
+        }
+    ],
+    "widget_interactions_url_template": "https://cf-blast.livelikecdn.com/api/v1/profiles/{profile_id}/widget-interactions/?text_prediction_id=81af9282-2bc5-4f81-8c30-7d8bfbb95d32",
+    "widget_attributes": [],
+    "timetoken": "16515734831013782"
+};
