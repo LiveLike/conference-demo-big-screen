@@ -22,9 +22,7 @@ body {
   font-weight: bold;
 }
 
-.widget-body {
-
-}
+.widget-body {}
 
 .image-quiz-option {
   height: 350px;
@@ -42,9 +40,15 @@ body {
   margin-top: 5%;
   margin-left: 5%;
   width: 90%;
-  height: 90%;
+  height: 75%;
   object-fit: contain;
   display: block;
+}
+
+.image-quiz-option-description {
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 /*
