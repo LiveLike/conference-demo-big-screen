@@ -104,19 +104,43 @@ const setTextQuizWidget = (widget) => {
     addWidgetInContainer(getTextPoll(widget));
 }
 
-const widgetHandler = (e) => {
-    console.log(e.event);
-    console.log(e.widgetPayload);
-    debugger;
+const getLastPublishedWidget = async () => {
+    var response = await LiveLike.getPostedWidgets({ programId: programId});
+    if (response.widgets && response.widgets.length) {
+        return response.widgets[0];
+    };
+}
+
+const loadLastPublishedWidget = async () => {
+    const lastPublishedWidget = await getLastPublishedWidget();
+    if (lastPublishedWidget) {
+        widgetHandler(lastPublishedWidget);
+    }
+}
+
+const widgetHandler = (widget) => {
+    if (widget.kind === "image-poll" || widget.kind === "image-quiz" || widget.kind === "image-prediction") {
+        if (widget.choices) {
+            widget.options = widget.choices;
+        }
+        setImageQuizWidget(widget);
+    }
+    if (widget.kind === "text-poll" || widget.kind === "text-quiz" || widget.kind === "text-prediction") {
+        if (widget.choices) {
+            widget.options = widget.choices;
+        }
+        setTextQuizWidget(widget);
+    }
+};
+
+const createWidgetEventHandler = (e) => {
     if (e.event === "image-poll-created" || e.event === "image-quiz-created" || e.event === "image-prediction-created") {
-        console.log(e.widgetPayload.question);
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
         setImageQuizWidget(e.widgetPayload);
     }
     if (e.event === "text-poll-created" || e.event === "text-quiz-created" || e.event === "text-prediction-created") {
-        console.log(e.widgetPayload.question);
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
@@ -124,8 +148,10 @@ const widgetHandler = (e) => {
     }
 };
 
+
 const setupWidgetListener = () => {
-    LiveLike.addWidgetListener({ programId: programId }, widgetHandler);
+    loadLastPublishedWidget(programId);
+    LiveLike.addWidgetListener({ programId: programId }, createWidgetEventHandler);
 };
 
 const initLiveLike = (clientId, program) => {
