@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="livelike-header">
+            <span>LiveLike</span>
+            <hr />
+        </div>
+        <div class="widgets-container">
+            <div class="widget-header">
+                <div class="row">
+                    <span>Who won the world cup 202?alsd lkasdk laklsdl aslkd</span>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="image-quiz-container">
+                    <div class="image-quiz-options">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="image-quiz-option">
+                                    <img class="image-quiz-option-img"
+                                        src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="image-quiz-option">
+                                    <img class="image-quiz-option-img"
+                                        src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/@livelike/engagementsdk@2.19.0/livelike.umd.js"></script>
+        <script src="script.js"></script>
+        <script>
+            const programId = "9baf1962-f7db-43b9-ae8e-b84f1bf31988";
+            const clientId = "jV2LSongmdccPRL65M8GC6Z8lTievPsRsqsoSMiq";
+            init(clientId, programId);
+        </script>
+</body>
+
+</html>
