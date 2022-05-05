@@ -79,6 +79,23 @@ const getImagePoll = (widget) => {
     `;
 };
 
+const getEmojiSlider = (widget) => {
+    return `
+    <div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <div class="emoji-slider-container">
+            <livelike-emoji-slider widgetid="${widget.id}"></livelike-emoji-slider>
+        </div>
+    </div>
+</div>
+    `;
+};
+
 const getWidgetsContainer = () => {
     return document.querySelector(".widgets-container");
 };
@@ -104,8 +121,12 @@ const setTextQuizWidget = (widget) => {
     addWidgetInContainer(getTextPoll(widget));
 }
 
+const setEmojiSliderWidget = (widget) => {
+    addWidgetInContainer(getEmojiSlider(widget));
+}
+
 const getLastPublishedWidget = async () => {
-    var response = await LiveLike.getPostedWidgets({ programId: programId});
+    var response = await LiveLike.getPostedWidgets({ programId: programId });
     if (response.widgets && response.widgets.length) {
         return response.widgets[0];
     };
@@ -119,6 +140,7 @@ const loadLastPublishedWidget = async () => {
 }
 
 const widgetHandler = (widget) => {
+    console.log(widget);
     if (widget.kind === "image-poll" || widget.kind === "image-quiz" || widget.kind === "image-prediction") {
         if (widget.choices) {
             widget.options = widget.choices;
@@ -130,6 +152,9 @@ const widgetHandler = (widget) => {
             widget.options = widget.choices;
         }
         setTextQuizWidget(widget);
+    }
+    if (widget.kind === "emoji-slider") {
+        setEmojiSliderWidget(widget);
     }
 };
 
@@ -148,7 +173,6 @@ const createWidgetEventHandler = (e) => {
     }
 };
 
-
 const setupWidgetListener = () => {
     loadLastPublishedWidget(programId);
     LiveLike.addWidgetListener({ programId: programId }, createWidgetEventHandler);
@@ -158,6 +182,7 @@ const initLiveLike = (clientId, program) => {
     return LiveLike.init({
         clientId: clientId,
     }).then((profile) => {
+        setupTheme();
         setupWidgetListener();
     });
 }
