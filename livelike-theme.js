@@ -84,8 +84,6 @@ const setupTheme = () => {
                         format: "fill"
                     }
                 },
-                body: {
-                },
                 interactiveTrackLeft: {
                     background: {
                         color: "ffffff",
@@ -99,7 +97,21 @@ const setupTheme = () => {
                     },
                 }
             },
-            cheerMeter: globalWidgetStyle,
+            cheerMeter: {
+                header: {
+                    fontColor: "000000",
+                    background: {
+                        color: "000000",
+                        format: "fill"
+                    }
+                },
+                body: {
+                    background: {
+                        color: "000000",
+                        format: "fill"
+                    }
+                },
+            },
         }
     });
 };

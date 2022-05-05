@@ -96,6 +96,23 @@ const getEmojiSlider = (widget) => {
     `;
 };
 
+const getCheerMeter = (widget) => {
+    return `
+    <div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <div class="cheer-meter-container">
+            <livelike-cheer-meter widgetid="${widget.id}"></livelike-cheer-meter>
+        </div>
+    </div>
+</div>
+    `;
+};
+
 const getWidgetsContainer = () => {
     return document.querySelector(".widgets-container");
 };
@@ -123,6 +140,10 @@ const setTextQuizWidget = (widget) => {
 
 const setEmojiSliderWidget = (widget) => {
     addWidgetInContainer(getEmojiSlider(widget));
+}
+
+const setCheerMeterWidget = (widget) => {
+    addWidgetInContainer(getCheerMeter(widget));
 }
 
 const getLastPublishedWidget = async () => {
@@ -156,6 +177,9 @@ const widgetHandler = (widget) => {
     if (widget.kind === "emoji-slider") {
         setEmojiSliderWidget(widget);
     }
+    if (widget.kind === "cheer-meter") {
+        setCheerMeterWidget(widget);
+    }
 };
 
 const createWidgetEventHandler = (e) => {
@@ -170,6 +194,12 @@ const createWidgetEventHandler = (e) => {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
         setTextQuizWidget(e.widgetPayload);
+    }
+    if (e.event === "emoji-slider-created") {
+        setEmojiSliderWidget(e.widgetPayload);
+    }
+    if (e.event === "cheer-meter-created") {
+        setCheerMeterWidget(e.widgetPayload);
     }
 };
 
