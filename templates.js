@@ -108,3 +108,20 @@ const getAlert = (widget) => {
 </div>
 `;
 };
+
+const getVideoAlert = (widget) => {
+    return `
+<div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.title}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <div class="cheer-meter-container">
+            <livelike-video-alert widgetid="${widget.id}"></livelike-video-alert>
+        </div>
+    </div>
+</div>
+`;
+};

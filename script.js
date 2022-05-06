@@ -72,6 +72,10 @@ const setAlertWidget = (widget)=>{
     addWidgetInContainer(getAlert(widget));
 };
 
+const setVideoAlertWidget = (widget)=>{
+    addWidgetInContainer(getVideoAlert(widget));
+};
+
 const getLastPublishedWidget = async () => {
     var response = await LiveLike.getPostedWidgets({ programId: programId });
     if (response.widgets && response.widgets.length) {
@@ -121,6 +125,9 @@ const widgetHandler = (widget) => {
     if(widget.kind === "alert"){
         setAlertWidget(widget);
     }
+    if(widget.kind === "video-alert"){
+        setVideoAlertWidget(widget);
+    }
 };
 
 const createWidgetEventHandler = (e) => {
@@ -157,10 +164,13 @@ const createWidgetEventHandler = (e) => {
     if (e.event === "alert-created") {
         setAlertWidget(e.widgetPayload);
     }
+    if (e.event === "video-alert-created") {
+        setVideoAlertWidget(e.widgetPayload);
+    }
 };
 
 const setupWidgetListener = () => {
-    //loadLastPublishedWidget(programId);
+    loadLastPublishedWidget(programId);
     LiveLike.addWidgetListener({ programId: programId }, createWidgetEventHandler);
 };
 
