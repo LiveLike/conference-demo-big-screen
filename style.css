@@ -87,6 +87,12 @@ body {
   display: none;
 }
 
-livelike-widget-header{
+livelike-widget-header {
   display: none;
+}
+
+.widget-media img {
+  width: 100%;
+  height: auto;
+  max-height: fit-content !important;
 }
