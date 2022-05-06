@@ -1,10 +1,20 @@
 const imageSliderTheme = {
     header: {
-        fontColor: "000000",
+        borderColor: "00aaff",
+        borderWidth: 1,
+        fontColor: "ffffff",
+        fontSize: 70,
         background: {
-            color: "000000",
+            color: "00aaff",
             format: "fill"
-        }
+        },
+    },
+    body: {
+        background: {
+            color: "ffffff00",
+            format: "fill"
+        },
+        margin: [100, 0, 0, 0]
     },
     interactiveTrackLeft: {
         background: {

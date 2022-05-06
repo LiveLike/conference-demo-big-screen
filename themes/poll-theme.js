@@ -8,7 +8,6 @@ const pollTheme = {
             color: "00aaff",
             format: "fill"
         },
-        margin: [0, 0, 0, 0],
     },
     body: {
         borderColor: "00aaff",
