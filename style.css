@@ -82,3 +82,11 @@ body {
     opacity: 2;
   }
 } */
+
+.vote-button {
+  display: none;
+}
+
+livelike-widget-header{
+  display: none;
+}

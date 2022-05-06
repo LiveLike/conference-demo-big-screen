@@ -1,53 +1,9 @@
-const createTextPollOption = (textQuizOption) => {
-    return `
-<div class="col-md-12">
-    <div class="text-quiz-option">
-        <p class="text-quiz-option-description">${textQuizOption.description}</p>
-    </div>
-</div>
-`;
-};
-
 const getTextPollOptions = (options) => {
     let result = "";
     for (let i = 0; i < options.length; i++) {
         result += createTextPollOption(options[i]);
     }
     return result;
-};
-
-const getTextPoll = (widget) => {
-    return `
-    <div class="widget-container">
-    <div class="widget-header">
-        <div class="row">
-            <span>${widget.question}</span>
-        </div>
-    </div>
-    <div class="widget-body">
-        <div class="text-quiz-container">
-            <div class="text-quiz-options">
-                <div class="row">
-                    ${getTextPollOptions(widget.options)}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    `;
-};
-
-const createImagePollOption = (imageQuizOption) => {
-    return `
-<div class="col-md-6">
-    <div class="image-quiz-option">
-        <img class="image-quiz-option-img"
-            src="${imageQuizOption.image_url}"
-            alt="">
-            <p class="image-quiz-option-description">${imageQuizOption.description}</p>
-    </div>
-</div>
-`;
 };
 
 const getImagePollOptions = (options) => {
@@ -79,40 +35,6 @@ const getImagePoll = (widget) => {
     `;
 };
 
-const getEmojiSlider = (widget) => {
-    return `
-    <div class="widget-container">
-    <div class="widget-header">
-        <div class="row">
-            <span>${widget.question}</span>
-        </div>
-    </div>
-    <div class="widget-body">
-        <div class="emoji-slider-container">
-            <livelike-emoji-slider widgetid="${widget.id}"></livelike-emoji-slider>
-        </div>
-    </div>
-</div>
-    `;
-};
-
-const getCheerMeter = (widget) => {
-    return `
-    <div class="widget-container">
-    <div class="widget-header">
-        <div class="row">
-            <span>${widget.question}</span>
-        </div>
-    </div>
-    <div class="widget-body">
-        <div class="cheer-meter-container">
-            <livelike-cheer-meter widgetid="${widget.id}"></livelike-cheer-meter>
-        </div>
-    </div>
-</div>
-    `;
-};
-
 const getWidgetsContainer = () => {
     return document.querySelector(".widgets-container");
 };
@@ -131,7 +53,7 @@ const addWidgetInContainer = (content) => {
 };
 
 const setImageQuizWidget = (widget) => {
-    addWidgetInContainer(getImagePoll(widget));
+    addWidgetInContainer(createImageQuizWidget(widget));
 }
 
 const setTextQuizWidget = (widget) => {
@@ -162,7 +84,19 @@ const loadLastPublishedWidget = async () => {
 
 const widgetHandler = (widget) => {
     console.log(widget);
-    if (widget.kind === "image-poll" || widget.kind === "image-quiz" || widget.kind === "image-prediction") {
+    if (widget.kind === "image-poll") {
+        if (widget.choices) {
+            widget.options = widget.choices;
+        }
+        setImageQuizWidget(widget);
+    }
+    if (widget.kind === "image-quiz") {
+        if (widget.choices) {
+            widget.options = widget.choices;
+        }
+        setImageQuizWidget(widget);
+    }
+    if (widget.kind === "image-prediction") {
         if (widget.choices) {
             widget.options = widget.choices;
         }
@@ -183,7 +117,19 @@ const widgetHandler = (widget) => {
 };
 
 const createWidgetEventHandler = (e) => {
-    if (e.event === "image-poll-created" || e.event === "image-quiz-created" || e.event === "image-prediction-created") {
+    if (e.event === "image-poll-created") {
+        if (e.widgetPayload.choices) {
+            e.widgetPayload.options = e.widgetPayload.choices;
+        }
+        setImageQuizWidget(e.widgetPayload);
+    }
+    if (e.event === "image-quiz-created") {
+        if (e.widgetPayload.choices) {
+            e.widgetPayload.options = e.widgetPayload.choices;
+        }
+        createImageQuizWidget(e.widgetPayload);
+    }
+    if (e.event === "image-prediction-created") {
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }

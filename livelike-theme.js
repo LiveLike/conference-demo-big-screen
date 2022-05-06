@@ -1,4 +1,4 @@
-const globalWidgetStyle = {
+const globalPollStyle = {
     header: {
         borderColor: "00aaff",
         borderWidth: 1,
@@ -14,7 +14,7 @@ const globalWidgetStyle = {
         borderWidth: 1,
         fontColor: "000000",
         background: {
-            color: "dedede",
+            color: "000000",
             format: "fill"
         },
         margin: [0, 0, 10, 0]
@@ -26,6 +26,7 @@ const globalWidgetStyle = {
             color: "ffffff",
             format: "fill"
         },
+        margin: [10, 0, 10, 0]
     },
     correctOptionBar: {
         borderColor: "00aaff",
@@ -34,14 +35,16 @@ const globalWidgetStyle = {
             colors: "dedede",
             format: "fill"
         },
+        margin: [10, 0, 10, 0]
     },
     incorrectOptionBar: {
         borderColor: "00aaff",
         borderWidth: 1,
         background: {
-            colors: "dedede",
+            colors: "ffffff",
             format: "fill"
         },
+        margin: [10, 0, 10, 0]
     },
     unselectedOptionBar: {
         borderColor: "00aaff",
@@ -50,6 +53,7 @@ const globalWidgetStyle = {
             colors: "dedede",
             format: "fill"
         },
+        margin: [10, 0, 10, 0]
     },
     selectedOptionBar: {
         borderColor: "ff0000",
@@ -70,7 +74,17 @@ const globalWidgetStyle = {
             color: "44bbff",
             format: "fill"
         },
-    }
+    },
+    timer: {
+        borderColor: "000000",
+        fontWeight: "normal",
+        borderWidth: 0,
+        background: {
+            "color": "00000000",
+            "format": "fill"
+        },
+        fontColor: "000000"
+    },
 };
 
 const setupTheme = () => {
@@ -112,6 +126,9 @@ const setupTheme = () => {
                     }
                 },
             },
+            poll: globalPollStyle,
+            quiz: globalPollStyle,
+            prediction: globalPollStyle,
         }
     });
 };
