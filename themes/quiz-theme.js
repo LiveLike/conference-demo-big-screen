@@ -13,8 +13,8 @@ const quizTheme = {
     body: {
         borderColor: "00aaff",
         borderWidth: 1,
-        fontColor: "000000",
         fontSize: 40,
+        fontColor: "000000",
         background: {
             color: "ffffff00",
             format: "fill"

@@ -61,6 +61,22 @@ const createImagePollWidget = (widget) => {
 `;
 };
 
+const createImagePredictionWidget = (widget) => {
+    console.log(widget.id);
+    return `
+<div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <livelike-image-prediction widgetid="${widget.id}"></livelike-image-prediction>
+    </div>
+</div>
+`;
+};
+
 const createImagePollOption = (imageQuizOption) => {
     return `
 <div class="col-md-6">

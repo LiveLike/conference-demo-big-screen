@@ -3,11 +3,12 @@ const predictionTheme = {
         borderColor: "00aaff",
         borderWidth: 1,
         fontColor: "ffffff",
+        fontSize: 70,
         background: {
             color: "00aaff",
             format: "fill"
         },
-        margin: [10, 0, 0, 0],
+        margin: [0, 0, 0, 0],
     },
     body: {
         borderColor: "00aaff",
@@ -15,7 +16,7 @@ const predictionTheme = {
         fontSize: 40,
         fontColor: "000000",
         background: {
-            color: "000000",
+            color: "ffffff00",
             format: "fill"
         },
         margin: [0, 0, 10, 0]
@@ -87,3 +88,4 @@ const predictionTheme = {
         fontColor: "000000"
     },
 };
+

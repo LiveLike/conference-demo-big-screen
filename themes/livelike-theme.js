@@ -90,6 +90,7 @@ const globalPollStyle = {
 const setupTheme = () => {
     LiveLike.applyTheme({
         widgets: {
+            alert: alertTheme,
             imageSlider: imageSliderTheme,
             cheerMeter: cheerMeterTheme,
             poll: pollTheme,
