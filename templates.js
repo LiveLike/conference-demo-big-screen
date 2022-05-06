@@ -97,12 +97,12 @@ const getAlert = (widget) => {
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
-            <span>${widget.question}</span>
+            <span>${widget.title}</span>
         </div>
     </div>
     <div class="widget-body">
         <div class="cheer-meter-container">
-            <livelike-cheer-meter widgetid="${widget.id}"></livelike-cheer-meter>
+            <livelike-alert widgetid="${widget.id}"></livelike-alert>
         </div>
     </div>
 </div>
