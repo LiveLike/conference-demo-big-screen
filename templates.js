@@ -45,6 +45,22 @@ const createImageQuizWidget = (widget) => {
 `;
 };
 
+const createImagePollWidget = (widget) => {
+    console.log(widget.id);
+    return `
+<div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <livelike-image-poll widgetid="${widget.id}"></livelike-image-poll>
+    </div>
+</div>
+`;
+};
+
 const createImagePollOption = (imageQuizOption) => {
     return `
 <div class="col-md-6">

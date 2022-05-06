@@ -1,12 +1,16 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .livelike-header {
+  margin-top: 25px;
   height: 100px;
   font-weight: bold;
-  font-size: 3em;
+}
+
+.livelike-header img{
+  max-height: 100%;
 }
 
 .livelike-header>hr {
@@ -15,14 +19,18 @@ body {
 
 .widgets-container {
   height: 350px;
+  margin-top: 25px;
 }
 
 .widget-header {
+  display: none;
   font-size: 4em;
   font-weight: bold;
 }
 
-.widget-body {}
+.widget-body {
+  
+}
 
 .image-quiz-option {
   height: 350px;
@@ -87,12 +95,23 @@ body {
   display: none;
 }
 
-livelike-widget-header {
+/* livelike-widget-header {
   display: none;
-}
+} */
 
 .widget-media img {
   width: 100%;
   height: auto;
   max-height: fit-content !important;
+}
+
+livelike-footer {
+  background-color: #dedede !important;
+}
+
+livelike-option {
+  border-width: 1px !important;
+  border-color: #00aaff !important;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
 }

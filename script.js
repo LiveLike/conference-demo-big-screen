@@ -52,9 +52,6 @@ const addWidgetInContainer = (content) => {
     widgetsContainer.innerHTML = content;
 };
 
-const setImageQuizWidget = (widget) => {
-    addWidgetInContainer(createImageQuizWidget(widget));
-}
 
 const setTextQuizWidget = (widget) => {
     addWidgetInContainer(getTextPoll(widget));
@@ -96,7 +93,7 @@ const widgetHandler = (widget) => {
         if (widget.choices) {
             widget.options = widget.choices;
         }
-        setImageQuizWidget(widget);
+        addWidgetInContainer(createImagePollWidget(widget));
     }
     if (widget.kind === "image-quiz") {
         if (widget.choices) {

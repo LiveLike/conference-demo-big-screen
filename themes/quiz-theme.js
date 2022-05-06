@@ -1,4 +1,4 @@
-const globalPollStyle = {
+const quizTheme = {
     header: {
         borderColor: "00aaff",
         borderWidth: 1,
@@ -85,50 +85,4 @@ const globalPollStyle = {
         },
         fontColor: "000000"
     },
-};
-
-const setupTheme = () => {
-    LiveLike.applyTheme({
-        widgets: {
-            imageSlider: {
-                header: {
-                    fontColor: "000000",
-                    background: {
-                        color: "000000",
-                        format: "fill"
-                    }
-                },
-                interactiveTrackLeft: {
-                    background: {
-                        color: "ffffff",
-                        format: "fill"
-                    },
-                },
-                interactiveTrackRight: {
-                    background: {
-                        color: "44bbff",
-                        format: "fill"
-                    },
-                }
-            },
-            cheerMeter: {
-                header: {
-                    fontColor: "000000",
-                    background: {
-                        color: "000000",
-                        format: "fill"
-                    }
-                },
-                body: {
-                    background: {
-                        color: "000000",
-                        format: "fill"
-                    }
-                },
-            },
-            poll: globalPollStyle,
-            quiz: globalPollStyle,
-            prediction: globalPollStyle,
-        }
-    });
 };
