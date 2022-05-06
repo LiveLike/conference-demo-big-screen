@@ -6,34 +6,6 @@ const getTextPollOptions = (options) => {
     return result;
 };
 
-const getImagePollOptions = (options) => {
-    let result = "";
-    for (let i = 0; i < options.length; i++) {
-        result += createImagePollOption(options[i]);
-    }
-    return result;
-};
-
-const getImagePoll = (widget) => {
-    return `
-    <div class="widget-container">
-    <div class="widget-header">
-        <div class="row">
-            <span>${widget.question}</span>
-        </div>
-    </div>
-    <div class="widget-body">
-        <div class="image-quiz-container">
-            <div class="image-quiz-options">
-                <div class="row">
-                    ${getImagePollOptions(widget.options)}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    `;
-};
 
 const getWidgetsContainer = () => {
     return document.querySelector(".widgets-container");
@@ -51,11 +23,6 @@ const addWidgetInContainer = (content) => {
     var widgetsContainer = getWidgetsContainer();
     widgetsContainer.innerHTML = content;
 };
-
-
-const setTextQuizWidget = (widget) => {
-    addWidgetInContainer(getTextPoll(widget));
-}
 
 const setEmojiSliderWidget = (widget) => {
     addWidgetInContainer(getEmojiSlider(widget));
@@ -105,7 +72,7 @@ const widgetHandler = (widget) => {
         if (widget.choices) {
             widget.options = widget.choices;
         }
-        addWidgetInContainer(createImagePredictionWidget(widget));
+        addWidgetInContainer(createImagePrediction(widget));
     }
     if (widget.kind === "text-poll" || widget.kind === "text-quiz" || widget.kind === "text-prediction") {
         if (widget.choices) {
@@ -128,23 +95,19 @@ const widgetHandler = (widget) => {
 };
 
 const createWidgetEventHandler = (e) => {
+    console.log(e.event);
+    console.log(e.widgetPayload.id);
+    console.log(e.widgetPayload);
+    debugger;
     if (e.event === "image-poll-created") {
-        if (e.widgetPayload.choices) {
-            e.widgetPayload.options = e.widgetPayload.choices;
-        }
         addWidgetInContainer(createImagePollWidget(widget));
     }
     if (e.event === "image-quiz-created") {
-        if (e.widgetPayload.choices) {
-            e.widgetPayload.options = e.widgetPayload.choices;
-        }
         addWidgetInContainer(createImagePollWidget(widget));
     }
     if (e.event === "image-prediction-created") {
-        if (e.widgetPayload.choices) {
-            e.widgetPayload.options = e.widgetPayload.choices;
-        }
-        addWidgetInContainer(createImagePredictionWidget(widget));
+        var imagePrediction = createImagePrediction(widget);
+        addWidgetInContainer(imagePrediction);
     }
     if (e.event === "text-poll-created" || e.event === "text-quiz-created" || e.event === "text-prediction-created") {
         if (e.widgetPayload.choices) {

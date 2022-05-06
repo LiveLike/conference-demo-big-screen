@@ -61,7 +61,7 @@ const createImagePollWidget = (widget) => {
 `;
 };
 
-const createImagePredictionWidget = (widget) => {
+const createImagePrediction = (widget) => {
     console.log(widget.id);
     return `
 <div class="widget-container">
