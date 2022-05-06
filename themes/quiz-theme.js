@@ -3,18 +3,20 @@ const quizTheme = {
         borderColor: "00aaff",
         borderWidth: 1,
         fontColor: "ffffff",
+        fontSize: 70,
         background: {
             color: "00aaff",
             format: "fill"
         },
-        margin: [10, 0, 0, 0],
+        margin: [0, 0, 0, 0],
     },
     body: {
         borderColor: "00aaff",
         borderWidth: 1,
         fontColor: "000000",
+        fontSize: 40,
         background: {
-            color: "000000",
+            color: "ffffff00",
             format: "fill"
         },
         margin: [0, 0, 10, 0]

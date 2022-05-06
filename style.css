@@ -115,3 +115,9 @@ livelike-option {
   margin-top: 1px !important;
   margin-bottom: 1px !important;
 }
+
+livelike-option livelike-image img{
+  width: 400px;
+  height: 60%;
+  max-height: 100%;
+}

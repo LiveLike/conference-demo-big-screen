@@ -65,11 +65,11 @@ const setCheerMeterWidget = (widget) => {
     addWidgetInContainer(getCheerMeter(widget));
 }
 
-const setAlertWidget = (widget)=>{
+const setAlertWidget = (widget) => {
     addWidgetInContainer(getAlert(widget));
 };
 
-const setVideoAlertWidget = (widget)=>{
+const setVideoAlertWidget = (widget) => {
     addWidgetInContainer(getVideoAlert(widget));
 };
 
@@ -99,13 +99,13 @@ const widgetHandler = (widget) => {
         if (widget.choices) {
             widget.options = widget.choices;
         }
-        setImageQuizWidget(widget);
+        addWidgetInContainer(createImageQuizWidget(widget));
     }
     if (widget.kind === "image-prediction") {
         if (widget.choices) {
             widget.options = widget.choices;
         }
-        setImageQuizWidget(widget);
+        addWidgetInContainer(createImagePredictionWidget(widget));
     }
     if (widget.kind === "text-poll" || widget.kind === "text-quiz" || widget.kind === "text-prediction") {
         if (widget.choices) {
@@ -119,10 +119,10 @@ const widgetHandler = (widget) => {
     if (widget.kind === "cheer-meter") {
         setCheerMeterWidget(widget);
     }
-    if(widget.kind === "alert"){
+    if (widget.kind === "alert") {
         setAlertWidget(widget);
     }
-    if(widget.kind === "video-alert"){
+    if (widget.kind === "video-alert") {
         setVideoAlertWidget(widget);
     }
 };
@@ -132,19 +132,19 @@ const createWidgetEventHandler = (e) => {
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
-        setImageQuizWidget(e.widgetPayload);
+        addWidgetInContainer(createImagePollWidget(widget));
     }
     if (e.event === "image-quiz-created") {
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
-        createImageQuizWidget(e.widgetPayload);
+        addWidgetInContainer(createImagePollWidget(widget));
     }
     if (e.event === "image-prediction-created") {
         if (e.widgetPayload.choices) {
             e.widgetPayload.options = e.widgetPayload.choices;
         }
-        setImageQuizWidget(e.widgetPayload);
+        addWidgetInContainer(createImagePredictionWidget(widget));
     }
     if (e.event === "text-poll-created" || e.event === "text-quiz-created" || e.event === "text-prediction-created") {
         if (e.widgetPayload.choices) {

@@ -12,6 +12,7 @@ const predictionTheme = {
     body: {
         borderColor: "00aaff",
         borderWidth: 1,
+        fontSize: 40,
         fontColor: "000000",
         background: {
             color: "000000",

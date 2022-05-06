@@ -13,6 +13,7 @@ const pollTheme = {
     body: {
         borderColor: "00aaff",
         borderWidth: 1,
+        fontSize: 40,
         fontColor: "000000",
         background: {
             color: "ffffff00",
