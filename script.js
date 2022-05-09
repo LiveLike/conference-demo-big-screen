@@ -1,12 +1,3 @@
-const getTextPollOptions = (options) => {
-    let result = "";
-    for (let i = 0; i < options.length; i++) {
-        result += createTextPollOption(options[i]);
-    }
-    return result;
-};
-
-
 const getWidgetsContainer = () => {
     return document.querySelector(".widgets-container");
 };
@@ -23,14 +14,6 @@ const addWidgetInContainer = (content) => {
     var widgetsContainer = getWidgetsContainer();
     widgetsContainer.innerHTML = content;
 };
-
-const setEmojiSliderWidget = (widget) => {
-    addWidgetInContainer(getEmojiSlider(widget));
-}
-
-const setCheerMeterWidget = (widget) => {
-    addWidgetInContainer(getCheerMeter(widget));
-}
 
 const setAlertWidget = (widget) => {
     addWidgetInContainer(getAlert(widget));
@@ -56,35 +39,29 @@ const loadLastPublishedWidget = async () => {
 
 const widgetHandler = (widget) => {
     console.log(widget);
+    if (widget.kind === "text-poll") {
+        addWidgetInContainer(createTextPollWidget(widget));
+    }
+    if (widget.kind === "text-quiz") {
+        addWidgetInContainer(createTextQuizWidget(widget));
+    }
+    if (widget.kind === "text-prediction") {
+        addWidgetInContainer(createTextPredictionWidget(widget))
+    }
     if (widget.kind === "image-poll") {
-        if (widget.choices) {
-            widget.options = widget.choices;
-        }
         addWidgetInContainer(createImagePollWidget(widget));
     }
     if (widget.kind === "image-quiz") {
-        if (widget.choices) {
-            widget.options = widget.choices;
-        }
         addWidgetInContainer(createImageQuizWidget(widget));
     }
     if (widget.kind === "image-prediction") {
-        if (widget.choices) {
-            widget.options = widget.choices;
-        }
-        addWidgetInContainer(createImagePrediction(widget));
-    }
-    if (widget.kind === "text-poll" || widget.kind === "text-quiz" || widget.kind === "text-prediction") {
-        if (widget.choices) {
-            widget.options = widget.choices;
-        }
-        setTextQuizWidget(widget);
+        addWidgetInContainer(createImagePredictionWidget(widget));
     }
     if (widget.kind === "emoji-slider") {
-        setEmojiSliderWidget(widget);
+        addWidgetInContainer(getEmojiSlider(widget));
     }
     if (widget.kind === "cheer-meter") {
-        setCheerMeterWidget(widget);
+        addWidgetInContainer(getCheerMeter(widget));
     }
     if (widget.kind === "alert") {
         setAlertWidget(widget);
@@ -96,37 +73,7 @@ const widgetHandler = (widget) => {
 
 const createWidgetEventHandler = (e) => {
     console.log(e.event);
-    console.log(e.widgetPayload.id);
-    console.log(e.widgetPayload);
-    debugger;
-    if (e.event === "image-poll-created") {
-        addWidgetInContainer(createImagePollWidget(widget));
-    }
-    if (e.event === "image-quiz-created") {
-        addWidgetInContainer(createImagePollWidget(widget));
-    }
-    if (e.event === "image-prediction-created") {
-        var imagePrediction = createImagePrediction(widget);
-        addWidgetInContainer(imagePrediction);
-    }
-    if (e.event === "text-poll-created" || e.event === "text-quiz-created" || e.event === "text-prediction-created") {
-        if (e.widgetPayload.choices) {
-            e.widgetPayload.options = e.widgetPayload.choices;
-        }
-        setTextQuizWidget(e.widgetPayload);
-    }
-    if (e.event === "emoji-slider-created") {
-        setEmojiSliderWidget(e.widgetPayload);
-    }
-    if (e.event === "cheer-meter-created") {
-        setCheerMeterWidget(e.widgetPayload);
-    }
-    if (e.event === "alert-created") {
-        setAlertWidget(e.widgetPayload);
-    }
-    if (e.event === "video-alert-created") {
-        setVideoAlertWidget(e.widgetPayload);
-    }
+    widgetHandler(e.widgetPayload);
 };
 
 const setupWidgetListener = () => {

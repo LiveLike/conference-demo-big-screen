@@ -1,32 +1,49 @@
-const createTextPollOption = (textQuizOption) => {
+const createTextQuizWidget = (widget) => {
+    console.log(widget.id);
     return `
-<div class="col-md-12">
-    <div class="text-quiz-option">
-        <p class="text-quiz-option-description">${textQuizOption.description}</p>
-    </div>
-</div>
-`;
-};
-
-const getTextPoll = (widget) => {
-    return `
-    <div class="widget-container">
+<div class="widget-container">
     <div class="widget-header">
         <div class="row">
             <span>${widget.question}</span>
         </div>
     </div>
     <div class="widget-body">
-        <div class="text-quiz-container">
-            <div class="text-quiz-options">
-                <div class="row">
-                    ${getTextPollOptions(widget.options)}
-                </div>
-            </div>
-        </div>
+        <livelike-text-quiz widgetid="${widget.id}"></livelike-text-quiz>
     </div>
 </div>
-    `;
+`;
+};
+
+const createTextPollWidget = (widget) => {
+    console.log(widget.id);
+    return `
+<div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <livelike-text-poll widgetid="${widget.id}"></livelike-text-poll>
+    </div>
+</div>
+`;
+};
+
+const createTextPredictionWidget = (widget) => {
+    console.log(widget.id);
+    return `
+<div class="widget-container">
+    <div class="widget-header">
+        <div class="row">
+            <span>${widget.question}</span>
+        </div>
+    </div>
+    <div class="widget-body">
+        <livelike-text-prediction widgetid="${widget.id}"></livelike-text-prediction>
+    </div>
+</div>
+`;
 };
 
 const createImageQuizWidget = (widget) => {
@@ -61,7 +78,7 @@ const createImagePollWidget = (widget) => {
 `;
 };
 
-const createImagePrediction = (widget) => {
+const createImagePredictionWidget = (widget) => {
     console.log(widget.id);
     return `
 <div class="widget-container">
@@ -72,19 +89,6 @@ const createImagePrediction = (widget) => {
     </div>
     <div class="widget-body">
         <livelike-image-prediction widgetid="${widget.id}"></livelike-image-prediction>
-    </div>
-</div>
-`;
-};
-
-const createImagePollOption = (imageQuizOption) => {
-    return `
-<div class="col-md-6">
-    <div class="image-quiz-option">
-        <img class="image-quiz-option-img"
-            src="${imageQuizOption.image_url}"
-            alt="">
-            <p class="image-quiz-option-description">${imageQuizOption.description}</p>
     </div>
 </div>
 `;

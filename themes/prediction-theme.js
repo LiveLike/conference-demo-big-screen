@@ -1,17 +1,17 @@
 const predictionTheme = {
     header: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         fontColor: "ffffff",
         fontSize: 70,
         background: {
-            color: "00aaff",
+            color: "003E77",
             format: "fill"
         },
         margin: [0, 0, 0, 0],
     },
     body: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         fontSize: 40,
         fontColor: "000000",
@@ -22,7 +22,7 @@ const predictionTheme = {
         margin: [0, 0, 10, 0]
     },
     selectedOption: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         background: {
             color: "ffffff",
@@ -31,7 +31,7 @@ const predictionTheme = {
         margin: [10, 0, 10, 0]
     },
     correctOptionBar: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         background: {
             colors: "dedede",
@@ -40,7 +40,7 @@ const predictionTheme = {
         margin: [10, 0, 10, 0]
     },
     incorrectOptionBar: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         background: {
             colors: "ffffff",
@@ -49,7 +49,7 @@ const predictionTheme = {
         margin: [10, 0, 10, 0]
     },
     unselectedOptionBar: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         background: {
             colors: "dedede",

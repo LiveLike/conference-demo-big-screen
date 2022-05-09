@@ -1,11 +1,11 @@
 const imageSliderTheme = {
     header: {
-        borderColor: "00aaff",
+        borderColor: "003E77",
         borderWidth: 1,
         fontColor: "ffffff",
         fontSize: 70,
         background: {
-            color: "00aaff",
+            color: "003E77",
             format: "fill"
         },
     },
