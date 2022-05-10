@@ -3,7 +3,7 @@ const cheerMeterTheme = {
         borderColor: "003E77",
         borderWidth: 1,
         fontColor: "ffffff",
-        fontSize: 70,
+        fontSize: 50,
         background: {
             color: "003E77",
             format: "fill"
