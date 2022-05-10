@@ -1,6 +1,6 @@
 const createTextQuizWidget = (widget) => {
-    console.log(widget.id);
-    return `
+  console.log(widget.id);
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -8,15 +8,15 @@ const createTextQuizWidget = (widget) => {
         </div>
     </div>
     <div class="widget-body">
-        <livelike-text-quiz widgetid="${widget.id}"></livelike-text-quiz>
+        <livelike-text-quiz widgetid="${widget.id}" mode="results-mode"></livelike-text-quiz>
     </div>
 </div>
 `;
 };
 
 const createTextPollWidget = (widget) => {
-    console.log(widget.id);
-    return `
+  console.log(widget.id);
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -31,8 +31,8 @@ const createTextPollWidget = (widget) => {
 };
 
 const createTextPredictionWidget = (widget) => {
-    console.log(widget.id);
-    return `
+  console.log(widget.id);
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -47,8 +47,8 @@ const createTextPredictionWidget = (widget) => {
 };
 
 const createImageQuizWidget = (widget) => {
-    console.log(widget.id);
-    return `
+  console.log(widget.id);
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -63,8 +63,8 @@ const createImageQuizWidget = (widget) => {
 };
 
 const createImagePollWidget = (widget) => {
-    console.log(widget.id);
-    return `
+  console.log(widget.id);
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -79,8 +79,8 @@ const createImagePollWidget = (widget) => {
 };
 
 const createImagePredictionWidget = (widget) => {
-    console.log(widget.id);
-    return `
+  console.log(widget.id);
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -95,7 +95,7 @@ const createImagePredictionWidget = (widget) => {
 };
 
 const getEmojiSlider = (widget) => {
-    return `
+  return `
     <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -112,7 +112,7 @@ const getEmojiSlider = (widget) => {
 };
 
 const getCheerMeter = (widget) => {
-    return `
+  return `
     <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -121,7 +121,7 @@ const getCheerMeter = (widget) => {
     </div>
     <div class="widget-body">
         <div class="cheer-meter-container">
-            <livelike-cheer-meter widgetid="${widget.id}"></livelike-cheer-meter>
+            <livelike-cheer-meter widgetid="${widget.id}" mode="results-mode"></livelike-cheer-meter>
         </div>
     </div>
 </div>
@@ -129,7 +129,7 @@ const getCheerMeter = (widget) => {
 };
 
 const getAlert = (widget) => {
-    return `
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
@@ -146,7 +146,7 @@ const getAlert = (widget) => {
 };
 
 const getVideoAlert = (widget) => {
-    return `
+  return `
 <div class="widget-container">
     <div class="widget-header">
         <div class="row">
