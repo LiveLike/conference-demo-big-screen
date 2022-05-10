@@ -91,6 +91,18 @@ body {
   height: 64px;
 }
 
+.leaderboard-table-column-rank {
+  width: 15%;
+}
+
+.leaderboard-table-column-username {
+  width: 70%;
+}
+
+.leaderboard-table-column-score {
+  width: 15%;
+}
+
 .experience-container {
   height: 350px;
   margin-top: 12px;
