@@ -124,10 +124,13 @@ livelike-footer {
 
 livelike-option {
   border-width: 1px !important;
-  border-color: #003E77 !important;
   margin-top: 1px !important;
   background: white;
   margin-bottom: 20px !important;
+}
+
+livelike-option:not([incorrect], [correct]){
+  border-color: #003e77 !important;
 }
 
 livelike-option livelike-image img{
