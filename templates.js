@@ -8,7 +8,7 @@ const createTextQuizWidget = (widget) => {
         </div>
     </div>
     <div class="widget-body">
-        <livelike-text-quiz widgetid="${widget.id}" mode="results-mode"></livelike-text-quiz>
+        <livelike-text-quiz widgetid="${widget.id}"></livelike-text-quiz>
     </div>
 </div>
 `;
