@@ -3,10 +3,17 @@ body {
   color: black;
 }
 
-.container{
+.container {
   max-width: 1280px;
 }
 
+.footer-image {
+  position: fixed;
+  bottom: 0px;
+  /* left: 50%; */
+}
+
+/* 
 .livelike-header {
   margin-top: 25px;
   height: 100px;
@@ -14,12 +21,12 @@ body {
 }
 
 .livelike-header img {
-  max-height: 100%;
+  max-width: 100%;
 }
 
 .livelike-header>hr {
   height: 5px;
-}
+} */
 
 /* .livelike-footer {
   background-color: #003e77;
@@ -29,11 +36,12 @@ body {
 */
 
 .livelike-footer {
-  background-color: transparent; 
+  width: 1280px;
+  background-color: red;
+  background-color: transparent;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: auto;
 }
 
 /* .livelike-footer>img {
@@ -47,22 +55,6 @@ body {
   padding: 5px;
 }
 
-.livelike-footer-qr-code>img {
-  max-height: 240px;
-}
-
-.livelike-footer-left-panel {
-  background-color: #003e77;
-  margin-top: 120px;
-  height: 120px;
-  width: 75%;
-  float: left;
-}
-
-.livelike-footer-left-panel img {
-  max-height: 100%;
-} */
-
 /* .widgets-container {
   height: 350px;
   margin-top: 25px;
@@ -74,13 +66,29 @@ body {
   width: 30%;
 } */
 
-.leaderboard-table {
-  font-size: 3em;
-}
-
 .current-widget-container {
   margin-right: 50px;
   flex-grow: 1;
+}
+
+.previous-widget-results-label {
+  font-weight: bold;
+  font-size: 52px;
+}
+
+.leaderboard-container-title {
+  font-weight: bold;
+  font-size: 52px;
+}
+
+.leaderboard-table-header {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.leaderboard-table-row {
+  font-size: 32px;
+  height: 64px;
 }
 
 .experience-container {

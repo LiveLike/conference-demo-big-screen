@@ -13,55 +13,61 @@
             <hr />
         </div> -->
         <div class="experience-container">
-            <div class="current-widget-container">
-                <h1 class="text-center">Current Widget</h1>
-                <div class="barcode-container">
-                    <div class="widget-header">
-                        <div class="row">
-                            <span>Scan the code to get involved and win!</span>
-                        </div>
-                    </div>
-                    <div class="widget-body">
-                        <div class="image-quiz-container">
-                            <div class="image-quiz-options">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="current-widget-container">
+                        <h1 class="text-center previous-widget-results-label">Previous Widget Results</h1>
+                        <div class="barcode-container">
+                            <div class="widget-header">
                                 <div class="row">
-                                    <div class="col-md-12" style="text-align: center;">
-                                        <img src="qr-code.png" width="400" alt="">
-                                        <p class="image-quiz-option-description">livelike.mobi/si22</p>
+                                    <span>Scan the code to get involved and win!</span>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="image-quiz-container">
+                                    <div class="image-quiz-options">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <img src="qr-code.png" width="400" alt="">
+                                                <p class="image-quiz-option-description">livelike.mobi/si22</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="widget-container">
+                            <livelike-widgets mode="results" programid="2708f001-383d-418a-912a-391b466e3d89">
+                            </livelike-widgets>
+                        </div>
                     </div>
                 </div>
-                <div class="widget-container">
-                    <livelike-widgets mode="results" programid="2708f001-383d-418a-912a-391b466e3d89">
-                    </livelike-widgets>
+                <div class="col-md-4">
+                    <div class="leaderboard-container">
+                        <h1 class="text-center leaderboard-container-title">Top 5 Leaderboard</h1>
+                        <table class="leaderboard-table table table-striped">
+                            <thead class="leaderboard-table-header">
+                                <th scope="col"><b>Rank</b></th>
+                                <th scope="col"><b>Player</b></th>
+                                <th scope="col"><b>Score</b></th>
+                            </thead>
+                            <tbody class="leaderboard-entries-container"></tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="leaderboard-container">
-                <h1 class="text-center">Top 5 Leaderboard</h1>
-                <table class="leaderboard-table table table-striped">
-                    <thead>
-                        <th scope="col"><b>Rank</b></th>
-                        <th scope="col"><b>Player</b></th>
-                        <th scope="col"><b>Score</b></th>
-                    </thead>
-                    <tbody class="leaderboard-entries-container"></tbody>
-                </table>
             </div>
         </div>
 
     </div>
-    <div class="livelike-footer">
+    <!-- <div class="livelike-footer"> -->
         <!-- <div class="livelike-footer-left-panel">
             <img src="logo-outline.svg" alt="">
         </div>
         <div class="livelike-footer-qr-code">
             <img src="qr-code.png"></img>
         </div> -->
-        <img width="100%" src="livelike-footer.png" alt="">
-    </div>
+        <img width="1280px" class="footer-image" src="livelike-footer.png" alt="">
+    <!-- </div> -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@livelike/engagementsdk@2.19.0/livelike.umd.dev.js"></script>
     <script src="themes/poll-theme.js"></script>
