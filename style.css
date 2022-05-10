@@ -24,15 +24,21 @@ body {
 }
 */
 
-.livelike-footer img {
-  max-height: 100%;
-}
-
 .livelike-footer {
   position: absolute;
   bottom: 0;
+  height: 240px;
   width: 100%;
-  height: 240px;  
+}
+
+.livelike-footer-qr-code {
+  width: 25%;
+  /* margin-right: 0; */
+  margin-left: auto;
+}
+
+.livelike-footer-qr-code>img {
+  max-height: 240px;
 }
 
 /* .widgets-container {
