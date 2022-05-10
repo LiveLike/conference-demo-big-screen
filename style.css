@@ -17,19 +17,31 @@ body {
   height: 5px;
 }
 
-.widgets-container {
+/* .widgets-container {
   height: 350px;
   margin-top: 25px;
+  width: 70%;
+}
+.leaderboard-container {
+  height: 350px;
+  margin-top: 25px;
+  width: 30%;
+} */
+
+.current-widget-container {
+  margin-right: 50px;
+}
+.experience-container{
+  height: 350px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .widget-header {
   display: none;
   font-size: 4em;
   font-weight: bold;
-}
-
-.widget-body {
-  
 }
 
 .image-quiz-option {
@@ -120,4 +132,15 @@ livelike-option livelike-image img{
   width: 400px;
   height: 60%;
   max-height: 100%;
+}
+
+h1, th{
+  color: #007ac4 !important;
+}
+.table>:not(:first-child){
+  border-top: none;
+}
+tbody{
+  box-shadow: 0 0 0 1px #dedede;
+  border-radius: 5px;
 }
