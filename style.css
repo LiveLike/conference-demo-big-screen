@@ -25,20 +25,24 @@ body {
 */
 
 .livelike-footer {
+  /* background-color: #003e77; */
   position: absolute;
   bottom: 0;
-  height: 240px;
   width: 100%;
 }
 
 .livelike-footer-qr-code {
   width: 25%;
-  /* margin-right: 0; */
-  margin-left: auto;
+  float: right;
 }
 
 .livelike-footer-qr-code>img {
   max-height: 240px;
+}
+
+.livelike-footer-left-panel {
+  width: 75%;
+  float: left;
 }
 
 /* .widgets-container {
@@ -51,6 +55,10 @@ body {
   margin-top: 25px;
   width: 30%;
 } */
+
+.leaderboard-table{
+  font-size: 1.8em;
+}
 
 .current-widget-container {
   margin-right: 50px;
