@@ -146,6 +146,7 @@ const setupLeaderboard = (program) => {
 
 function resultsMode({ widget }) {
   widget.hide_dismiss_button = true;
+  widget.hideVoteInResults = false;
   if (lastWidget) {
     return widgetContainer
       .detach(lastWidget)

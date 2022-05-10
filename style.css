@@ -125,7 +125,8 @@ livelike-option {
   border-width: 1px !important;
   border-color: #003E77 !important;
   margin-top: 1px !important;
-  margin-bottom: 1px !important;
+  background: white;
+  margin-bottom: 20px !important;
 }
 
 livelike-option livelike-image img{
@@ -143,4 +144,13 @@ h1, th{
 tbody{
   box-shadow: 0 0 0 1px #dedede;
   border-radius: 5px;
+}
+livelike-widget-root{
+  background: #F2F3F7;
+  padding: 0px 50px 20px 50px;
+}
+
+livelike-widget-header{
+  color: black;
+  background: transparent;
 }
