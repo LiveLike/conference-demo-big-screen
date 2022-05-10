@@ -149,8 +149,8 @@ function resultsMode({ widget }) {
   widget.hideVoteInResults = false;
   if (lastWidget) {
     return widgetContainer
-      .detach(lastWidget)
-      .then(() => widgetContainer.attach(widget))
+      .detach(widgetContainer.firstChild)
+      .then(() => widgetContainer.attach(lastWidget))
       .then(() => {
         lastWidget = widget;
         return widget.results({ timeout: null });
