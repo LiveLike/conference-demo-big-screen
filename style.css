@@ -30,6 +30,7 @@ body {
 
 .current-widget-container {
   margin-right: 50px;
+  flex-grow: 1;
 }
 .experience-container{
   height: 350px;
