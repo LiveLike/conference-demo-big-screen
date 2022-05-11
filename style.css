@@ -231,3 +231,11 @@ livelike-widget-header {
   color: black;
   background: transparent;
 }
+
+.slider-image{
+  height: 150px !important;
+}
+
+.slider-thumb{
+  --thumb-width: 150px;
+}
