@@ -205,7 +205,7 @@ livelike-option:not([incorrect], [correct]) {
 }
 
 livelike-option livelike-image img {
-  width: 400px;
+  width: 100px;
   height: 60%;
   max-height: 100%;
 }
