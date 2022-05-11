@@ -10,6 +10,7 @@ body {
 .footer-image {
   position: fixed;
   bottom: 0px;
+  width: 100%;
   /* left: 50%; */
 }
 
@@ -238,4 +239,8 @@ livelike-widget-header {
 
 .slider-thumb{
   --thumb-width: 150px;
+}
+
+.list-item{
+  font-size: 32px !important;
 }
