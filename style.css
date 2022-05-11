@@ -106,8 +106,6 @@ body {
 .experience-container {
   height: 350px;
   margin-top: 12px;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .widget-header {
