@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./esc/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="livelike-header">
+            <img src="LogoH_Green_Fill_onLight.png"></img>
+            <hr />
+        </div> -->
+        <div class="experience-container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="current-widget-container">
+                        <h1 class="text-center previous-widget-results-label">Results</h1>
+                        <div class="barcode-container">
+                            <!-- <div class="widget-header">
+                                <div class="row">
+                                    <span>Scan the code to get involved and win!</span>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="image-quiz-container">
+                                    <div class="image-quiz-options">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <img src="qr-code.png" width="400" alt="">
+                                                <p class="image-quiz-option-description">livelike.mobi/si22</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="widget-container">
+                            <livelike-widgets mode="results" programid="df5e567d-7fb5-4258-9a58-03b837255ad9">
+                            </livelike-widgets>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="leaderboard-container">
+                        <h1 class="text-center leaderboard-container-title">Leaderboard</h1>
+                        <table class="leaderboard-table table table-striped">
+                            <thead class="leaderboard-table-header">
+                                <th class="leaderboard-table-column-rank" scope="col"><b>Rank</b></th>
+                                <th class="leaderboard-table-column-username" scope="col"><b>Player</b></th>
+                                <th class="leaderboard-table-column-score"scope="col"><b>Score</b></th>
+                            </thead>
+                            <tbody class="leaderboard-entries-container"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="livelike-footer"> -->
+        <!-- <div class="livelike-footer-left-panel">
+            <img src="logo-outline.svg" alt="">
+        </div>
+        <div class="livelike-footer-qr-code">
+            <img src="qr-code.png"></img>
+        </div> -->
+        <img width="1280px" class="footer-image" src="eSC-footer.png" alt="">
+    <!-- </div> -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@livelike/engagementsdk@2.19.0/livelike.umd.dev.js"></script>
+    <script src="themes/poll-theme.js"></script>
+    <script src="themes/alet-theme.js"></script>
+    <script src="themes/image-slider-theme.js"></script>
+    <script src="themes/cheer-meter-theme.js"></script>
+    <script src="themes/quiz-theme.js"></script>
+    <script src="themes/prediction-theme.js"></script>
+    <script src="themes/livelike-theme.js"></script>
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const programId = "df5e567d-7fb5-4258-9a58-03b837255ad9";
+        const clientId = "zOjCtj3fUKgZOzML7vl45CdaMDGrlfEonNhGvO10";
+        init(clientId, programId);
+    </script>
+</body>
+
+</html>
