@@ -148,14 +148,21 @@ function resultsMode({ widget }) {
   widget.hide_dismiss_button = true;
   widget.hideVoteInResults = false;
   if (lastWidget) {
+    if(isFirstWidget){      // here
+      lastWidget = widget;
+      isFirstWidget = false;
+      return;
+    }
     return widgetContainer
       .detach(widgetContainer.firstChild)
       .then(() => widgetContainer.attach(lastWidget))
       .then(() => {
+        const currentWidget = lastWidget;
         lastWidget = widget;
-        return widget.results({ timeout: null });
+        return currentWidget.results({ timeout: null });
       });
   }
+  isFirstWidget = true;  // here
   return widgetContainer.attach(widget).then(() => {
     lastWidget = widget;
     return widget.results({ timeout: null });
