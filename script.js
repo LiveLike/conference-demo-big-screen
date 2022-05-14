@@ -134,7 +134,7 @@ const setupLeaderboard = (program) => {
       });
     });
   };
-  const leaderboardId = '67b7ef06-f006-498e-adfa-38f57dcfff55';
+  const leaderboardId = '05b3dd11-3862-4605-925c-ed36944d9752';
   if (leaderboardId) {
     buildLeaderboard(leaderboardId);
     // When a widget is dismissed, we update the leaderboard to show updated ranks and points
